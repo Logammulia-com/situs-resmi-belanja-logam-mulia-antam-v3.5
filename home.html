@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANTAMA | Beranda</title>
+  <link rel="stylesheet" href="home.css" />
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#c1a14a">
+  <link rel="apple-touch-icon" href="icon-512.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="ANTAMA">
+  <link rel="icon" href="icon-512.png" type="image/png">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="mobile-header">
+    <div class="logo">ANTAMA</div>
+
+    <div class="header-search">
+      <input type="text" id="searchInput" placeholder="Cari produk emas...">
+      <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png"
+          id="searchIcon"
+          class="search-icon"
+          alt="Cari">
+    </div>
+
+    <div class="header-icons">
+      <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png"
+          id="headerAccountIcon"
+          class="icon"
+          alt="Akun">
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <h2 class="section-title">Produk Emas ANTAM</h2>
+    <div id="productGrid" class="product-grid"></div>
+  </main>
+
+  <!-- MODAL PRODUK -->
+  <div id="productModal" class="modal">
+    <div class="modal-content" id="modalContent">
+      <img src="" alt="">
+      <h3></h3>
+      <p id="modalPrice"></p>
+      <button class="close-modal" id="closeModal">Tutup</button>
+    </div>
+  </div>
+
+  <!-- NAV BOTTOM -->
+  <nav class="bottom-nav">
+    <button class="nav-btn active" onclick="window.location.href='home.html'">🏠<span>Beranda</span></button>
+    <button class="nav-btn" onclick="window.location.href='harga.html'">💰<span>Harga</span></button>
+    <button class="nav-btn" onclick="window.location.href='checkout.html'">🛒<span>Keranjang</span></button>
+    <button class="nav-btn" onclick="window.location.href='akun.html'">👤<span>Akun</span></button>
+  </nav>
+
+  <script src="home.js"></script>
+</body>
+</html>

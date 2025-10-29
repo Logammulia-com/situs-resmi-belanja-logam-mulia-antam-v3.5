@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | ANTAMA</title>
+  <link rel="stylesheet" href="admin.css">
+
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#c1a14a">
+<link rel="apple-touch-icon" href="icon-512.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ANTAMA">
+<link rel="icon" href="icon-512.png" type="image/png">
+
+</head>
+<body>
+  <header class="admin-header">
+    <h1>Admin Panel ANTAMA</h1>
+    <button id="logoutBtn" class="btn red">Logout</button>
+  </header>
+
+  <nav class="admin-nav">
+    <button data-tab="hargaTab" class="active">💰 Harga</button>
+    <button data-tab="produkTab">📦 Produk</button>
+    <button data-tab="orderTab">🧾 Pesanan</button>
+    <button data-tab="userTab">👥 Pengguna</button>
+    <button data-tab="rekeningTab">🏦 Rekening</button>
+  </nav>
+
+  <main>
+    <!-- 💰 HARGA -->
+    <section id="hargaTab" class="tab active">
+      <h2>Daftar Harga Emas</h2>
+      <table id="hargaTable">
+        <thead>
+          <tr><th>Gram</th><th>Harga (Rp)</th><th>Aksi</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="form-box">
+        <input id="hargaGram" placeholder="Gram">
+        <input id="hargaValue" type="number" placeholder="Harga (Rp)">
+        <button id="addHargaBtn">Tambah / Update Harga</button>
+      </div>
+    </section>
+
+    <!-- 📦 PRODUK -->
+    <section id="produkTab" class="tab">
+      <h2>Produk Emas</h2>
+      <table id="produkTable">
+        <thead>
+          <tr><th>Nama Produk</th><th>Harga</th><th>Gambar</th><th>Aksi</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="form-box">
+        <input id="produkName" placeholder="Nama Produk">
+        <input id="produkPrice" type="number" placeholder="Harga (Rp)">
+        <input id="produkImage" placeholder="URL Gambar">
+        <button id="addProdukBtn">Tambah / Update Produk</button>
+      </div>
+    </section>
+
+    <!-- 🧾 PESANAN -->
+    <section id="orderTab" class="tab">
+      <h2>Pesanan Masuk</h2>
+      <div id="orderList"></div>
+    </section>
+
+    <!-- 👥 USER -->
+    <section id="userTab" class="tab">
+      <h2>Data Pengguna</h2>
+      <div id="userList"></div>
+    </section>
+
+    <!-- 🏦 REKENING -->
+    <section id="rekeningTab" class="tab">
+      <h2>Rekening Pembayaran</h2>
+      <div class="form-box">
+        <label>Nama Bank</label>
+        <input id="rekBank" placeholder="Nama Bank (contoh: BCA)">
+        <label>Nama Pemilik</label>
+        <input id="rekNama" placeholder="Nama Pemilik Rekening">
+        <label>Nomor Rekening</label>
+        <input id="rekNomor" placeholder="Nomor Rekening">
+        <label>Catatan</label>
+        <textarea id="rekNote" placeholder="Catatan tambahan (opsional)"></textarea>
+        <button id="saveRekeningBtn" class="btn">💾 Simpan Rekening</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
