@@ -1,7 +1,7 @@
 {
-  "name": "ANTAMA",
-  "short_name": "ANTAMA",
-  "description": "Aplikasi Web ANTAMA - Jual Beli Emas Online",
+  "name": "ANTAM",
+  "short_name": "ANTAM",
+  "description": "Aplikasi Web ANTAM - Jual Beli Emas Online",
   "start_url": "home.html",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -14,3 +14,4 @@
     }
   ]
 }
+
